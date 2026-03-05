@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;500&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffc2d1;
+            background-image: url("image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80' fill='%23ff8fa3' opacity='0.4'%3E❤%3C/text%3E%3C/svg%3E");
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .libro {
+            background: #fff0f3;
+            width: 90%;
+            max-width: 450px;
+            min-height: 600px;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            border: 4px solid #ff8fa3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pagina-contenido {
+            display: none;
+            animation: fadeIn 0.8s;
+        }
+
+        .pagina-contenido.activo {
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #d63384;
+            font-size: 3em;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #d63384;
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .emoji {
+            font-size: 60px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* ESTILOS DE LA IMAGEN */
+        .imagen-pagina {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid #ffb3c6;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .botones {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #d63384;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background: #ffb3c6;
+            cursor: default;
+            transform: none;
+        }
+
+        .contador {
+            margin-top: 10px;
+            color: #ff8fa3;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="libro">
+
+        <!-- PÁGINA 1 -->
+        <div class="pagina-contenido activo" id="p1">
+            <span class="emoji">💌</span>
+            <h1>Hola...</h1>
+            <p>Tengo algo especial que mostrarte.</p>
+            <p>¿Me acompañas a pasar las páginas linda?</p>
+            <!-- IMAGEN DE REFERENCIA 1 -->
+            <img src="imagen_2026-03-05_143225160-removebg-preview.png" alt="Imagen 1" class="imagen-pagina">
+        </div>
+
+        <!-- PÁGINA 2 -->
+        <div class="pagina-contenido" id="p2">
+            <span class="emoji">🌸</span>
+            <h2>Primero que nada</h2>
+            <p>Quería recordarte lo importante que eres.</p>
+            <p>Tu sonrisa tiene el poder de cambiar mi día completo, tanto como para sacarme una sonrisa aunque el dia
+                sea tan malo o quiera madrearme a alguien.</p>
+            <!-- IMAGEN DE REFERENCIA 2 -->
+            <img src="imagen_2026-03-05_143445575-removebg-preview.png" alt="Imagen 2" class="imagen-pagina">
+        </div>
+
+        <!-- PÁGINA 3 -->
+        <div class="pagina-contenido" id="p3">
+            <span class="emoji">💖</span>
+            <h2>Y también...</h2>
+            <p>Que cada momento contigo es un regalo.</p>
+            <p>siempre sacamos una conversa, me da mucha alegria eso, ojala nunca se acabe y que siempre hagamos habladera al fallo en el gym</p>
+            <!-- IMAGEN DE REFERENCIA 3 -->
+            <img src="imagen_2026-03-05_143650088-removebg-preview.png" alt="Imagen 3" class="imagen-pagina">
+        </div>
+
+        <!-- PÁGINA 4 (Final) -->
+        <div class="pagina-contenido" id="p4">
+            <span class="emoji">✨</span>
+            <h1>TQM</h1>
+            <p>Espero que esto te haya sacado una sonrisa.</p>
+            <p>¡Eres lo mejor! ❤ y sabes que puedes contar conmigo en lo que necesites</p>
+            <p>ATT= Junior ;3</p>
+            <!-- IMAGEN DE REFERENCIA 4 -->
+            <img src="imagen_2026-03-05_143850388-removebg-preview.png" alt="Imagen 4" class="imagen-pagina">
+        </div>
+
+        <!-- ZONA DE BOTONES -->
+        <div>
+            <div class="botones">
+                <button id="btnAnt" onclick="cambiarPagina(-1)" disabled>← Atrás</button>
+                <button id="btnSig" onclick="cambiarPagina(1)">Siguiente →</button>
+            </div>
+            <div class="contador" id="contador">Página 1 de 4</div>
+        </div>
+
+    </div>
+
+    <script>
+        let paginaActual = 1;
+        const totalPaginas = 4;
+
+        function cambiarPagina(direccion) {
+            document.getElementById(`p${paginaActual}`).classList.remove('activo');
+            paginaActual += direccion;
+            document.getElementById(`p${paginaActual}`).classList.add('activo');
+
+            document.getElementById('btnAnt').disabled = (paginaActual === 1);
+            document.getElementById('btnSig').disabled = (paginaActual === totalPaginas);
+
+            if (paginaActual === totalPaginas) {
+                document.getElementById('btnSig').innerText = "Fin ❤";
+            } else {
+                document.getElementById('btnSig').innerText = "Siguiente →";
+            }
+
+            document.getElementById('contador').innerText = `Página ${paginaActual} de ${totalPaginas}`;
+        }
+    </script>
+
+</body>
+
+</html>
